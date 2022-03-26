@@ -1,4 +1,8 @@
 # T1Ng
+# TRABALHO DE TECNICAS DE PROGRAMAÇÃO
+# DUPLA
+## LUCAS LIMA
+## MICHEL RIBEIRO
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
