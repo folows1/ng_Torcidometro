@@ -1,0 +1,30 @@
+<p>register-team works!</p>
+<div>
+    <form #myForm="ngForm" (submit)="saveData(myForm)">
+        <div>
+            <label>Nome do Time:</label>
+            <input type="text" [(ngModel)]="newTeam.name" name="nome" #nome="ngModel" required>
+            <div *ngIf="nome.dirty || nome.touched">
+                <p *ngIf="nome.errors?.['required']">Nome Obrigatório</p>
+            </div>
+        </div>
+
+        <div>
+            <label>País do Time:</label>
+            <input type="text" [(ngModel)]="newTeam.nation" name="pais" #pais="ngModel" required>
+            <div *ngIf="pais.dirty || pais.touched">
+                <p *ngIf="pais.errors?.['required']">País Obrigatório</p>
+                <p *ngIf='checkNation()'>Time já cadastrado</p>
+            </div>
+        </div>
+        <input type="submit" value="Salvar" [disabled]="myForm.invalid || checkNation()">
+    </form>
+
+    <h2>Lista de Times</h2>
+
+    <ul>
+        <li *ngFor="let team of teamList">
+            {{team.name}} - {{team.nation}}
+        </li>
+    </ul>
+</div>

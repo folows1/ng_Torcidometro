@@ -1,0 +1,5 @@
+<p>home works!</p>
+
+<div *ngFor="let team of teamList">
+    <p (click)="addCount(team)">{{team.name}} - {{team.nation}} {{team.count}}</p>
+</div>
