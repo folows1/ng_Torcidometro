@@ -1,0 +1,53 @@
+#tableDiv {
+    width: fit-content;
+    margin: 30px auto;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bolder;
+    padding: 25px 25px;
+    font-size: 20px;
+}
+
+td {
+    font-size: 18px;
+    text-align: center;
+    padding: 20px 20px;
+    vertical-align: middle !important;
+}
+
+caption {
+    font-weight: bolder;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+#chart {
+    width: 80%;
+    height: 500px;
+    margin: 50px auto;
+}
+
+.noteams {
+    width: fit-content;
+    margin: 50px auto;
+    font-size: 24px;
+}

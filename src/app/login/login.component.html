@@ -1,6 +1,6 @@
-<p>login works!</p>
-<div>
-    <form #myForm="ngForm" (submit)="login(myForm)">
+<div class="container">
+    <h2>Login</h2>
+    <form #myForm="ngForm" (submit)="login()">
         <div>
             <label>Usuário</label>
             <input type='text' [(ngModel)]='newUser.username' name='username' required />
@@ -10,7 +10,7 @@
             <input type="password" [(ngModel)]='newUser.password' name='password' required />
         </div>
         <div>
-            <input type="submit" [disabled]="myForm.invalid" value="Login" />
+            <input type="submit" [disabled]="myForm.invalid" value="Login" class='button' />
         </div>
     </form>
 </div>

@@ -19,6 +19,7 @@ export class RegisterTeamComponent implements OnInit {
     this.newTeam.count = 0
     this.registerTeamService.saveTeam(this.newTeam)
     this.newTeam = {} as Team
+    alert('Time cadastrado com sucesso!')
     form.resetForm()
   }
 

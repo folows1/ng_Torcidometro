@@ -1,5 +1,33 @@
-<p>home works!</p>
-
-<div *ngFor="let team of teamList">
-    <p (click)="addCount(team)">{{team.name}} - {{team.nation}} {{team.count}}</p>
+<div *ngIf="teamList.length !== 0; else elseBlock" id="tableDiv">
+    <table>
+        <caption>Times Cadastrados</caption>
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>País</th>
+                <th>Torcedores</th>
+                <th>Votar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let team of teamList" class="data">
+                <td class="team">{{team.name}}</td>
+                <td class="nation">{{team.nation | uppercase}}</td>
+                <td class="count">{{team.count}}</td>
+                <td class="voteTD">
+                    <img src='../../assets/sign-add-icon.png' (click)="addCount(team)" width="35px" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>
+<div id="chart">
+    <canvas id="chartID" width="100%" height="100%"></canvas>
+</div>
+
+<ng-template #elseBlock>
+    <div class="noteams">
+        <h1>Não há times cadastrados</h1>
+        <a routerLink="/register-team">Registre um Time.</a>
+    </div>
+</ng-template>

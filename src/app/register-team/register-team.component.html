@@ -1,5 +1,6 @@
-<p>register-team works!</p>
-<div>
+<!-- <p>register-team works!</p> -->
+<div class="container">
+    <h2>Registro de Times</h2>
     <form #myForm="ngForm" (submit)="saveData(myForm)">
         <div>
             <label>Nome do Time:</label>
@@ -17,14 +18,6 @@
                 <p *ngIf='checkNation()'>Time já cadastrado</p>
             </div>
         </div>
-        <input type="submit" value="Salvar" [disabled]="myForm.invalid || checkNation()">
+        <input type="submit" value="Salvar" [disabled]="myForm.invalid || checkNation()" class="button">
     </form>
-
-    <h2>Lista de Times</h2>
-
-    <ul>
-        <li *ngFor="let team of teamList">
-            {{team.name}} - {{team.nation}}
-        </li>
-    </ul>
 </div>
