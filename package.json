@@ -3,10 +3,14 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "node server",
+    "build": "ng build --prod --base-href t1-ng",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
+  },
+  "engines": {
+    "node": "16.13.0",
+    "npm": "8.1.0"
   },
   "private": true,
   "dependencies": {
@@ -19,6 +23,7 @@
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
     "chart.js": "^3.7.1",
+    "express": "^4.17.3",
     "ng2-charts": "^3.0.8",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
